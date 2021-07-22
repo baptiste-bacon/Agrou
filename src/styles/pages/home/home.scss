@@ -1,0 +1,195 @@
+.home {
+  @extend %page;
+
+  overflow: hidden;
+  background-color: $color-cod-gray;
+  color: $color-white;
+}
+.home__main {
+  background-image: url("../images/background1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100vw;
+  height: 108rem;
+
+  @include media("<phone") {
+    background-size: cover;
+  }
+}
+.home__icon {
+  display: flex;
+  justify-content: center;
+}
+.home__icon__media {
+  position: relative;
+  width: 70rem;
+  height: 19.4rem;
+  margin-top: 4rem;
+  margin-bottom: 12.5rem;
+}
+.home__icon__media__image {
+  @extend %cover;
+
+  object-fit: cover;
+}
+.home__thumbnail__media {
+  position: relative;
+  width: 80rem;
+  height: 44.7rem;
+  margin: auto;
+  border: solid 0.4rem $color-white;
+  background-color: $color-white;
+
+  @include media("<phone") {
+    width: 60rem;
+    height: 33.6rem;
+  }
+}
+.home__thumbnail__media__image {
+  @extend %cover;
+
+  object-fit: cover;
+}
+.home__main__highlight {
+  position: relative;
+  margin-top: -15rem;
+
+  @include media("<phone") {
+    height: 35rem;
+    margin-top: -20rem;
+  }
+}
+.home__main__svg {
+  height: 100%;
+}
+.home__main__highlight__description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 130rem;
+  font-family: Dosis;
+  font-weight: 600;
+  font-size: 4rem;
+  letter-spacing: 0.1rem;
+
+  @include media("<phone") {
+    width: 60rem;
+    font-size: 2.5rem;
+  }
+}
+.home__cards {
+  width: 100vw;
+  height: 108rem;
+  margin-top: -10rem;
+  position: relative;
+
+  @include media("<phone") {
+    background-size: cover;
+  }
+}
+
+.home__cards__title {
+  padding-top: 20rem;
+  font-family: "Swallow-Falls";
+  font-size: 6rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.home__cards__medias {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.home__cards__media {
+  position: relative;
+  height: auto;
+  width: 22rem;
+  height: 30rem;
+  margin: 0 2rem;
+  cursor: pointer;
+}
+.home__cards__media__image--front {
+  @extend %cover;
+
+  object-fit: cover;
+}
+.home__cards__media__image--back {
+  @extend %cover;
+
+  object-fit: cover;
+  display: none;
+}
+.home__cards__description {
+  font-family: "Swallow-Falls";
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 2rem;
+}
+.home__cards__highlight {
+  position: relative;
+  margin-top: -15rem;
+
+  @include media("<phone") {
+    height: 35rem;
+    margin-top: -20rem;
+  }
+}
+
+.home__cards__svg {
+  height: 100%;
+}
+.home__cards__highlight__description {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 130rem;
+  font-family: Dosis;
+  font-weight: 600;
+  font-size: 4rem;
+  letter-spacing: 0.1rem;
+
+  @include media("<phone") {
+    width: 60rem;
+    font-size: 2.5rem;
+  }
+}
+.home__cards__description--team {
+  color: #01ab07;
+}
+.home__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home__footer__icon {
+  position: relative;
+  margin-bottom: 2rem;
+  width: 10rem;
+  height: 10rem;
+}
+
+.home__footer__icon__image {
+  @extend %cover;
+
+  object-fit: cover;
+}
+.home__footer__description {
+  font-family: "Swallow-Falls";
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 8rem;
+
+  @include media("<phone") {
+    font-size: 4rem;
+  }
+}

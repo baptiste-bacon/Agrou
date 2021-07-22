@@ -1,0 +1,18 @@
+@import "./base/reset";
+
+@import "./utils/functions";
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/vendors";
+@import "./utils/responsive";
+
+@import "./shared/titles";
+@import "./shared/descriptions";
+@import "./shared/pages";
+
+@import "./base/fonts";
+@import "./base/base";
+
+@import "./components/preloader";
+
+@import "./pages/home/home";

@@ -1,0 +1,46 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html {
+  @extend %cover;
+
+  font-size: calc(100vw / 1920 * 10);
+  line-height: 1;
+  position: fixed;
+  overflow: hidden;
+
+  @include media("<phone") {
+    font-size: calc(100vw / 750 * 10);
+  }
+}
+
+body {
+  @extend %cover;
+
+  position: fixed;
+}
+
+a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+button {
+  color: inherit;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+#content {
+  @extend %cover;
+}

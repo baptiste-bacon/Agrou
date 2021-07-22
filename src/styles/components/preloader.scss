@@ -1,0 +1,23 @@
+.preloader {
+  @extend %cover;
+
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: z("preloader");
+  background-color: $color-cod-gray;
+  color: $color-white;
+}
+.preloader__text {
+  max-width: 50rem;
+  line-height: 1;
+  font-size: 8rem;
+}
+.preloader__number {
+  bottom: 7.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  font-size: 4rem;
+}
