@@ -1,0 +1,43 @@
+extends ../template.pug
+
+block variables
+  - var template = 'home'
+
+block content
+  .home 
+    .home__wrapper
+      
+      .home__main
+        .home__icon
+          figure.home__icon__media
+            img.home__icon__media__image(data-src=home.data.icon.url alt=home.data.icon.alt)
+        figure.home__thumbnail__media
+          img.home__thumbnail__media__image(data-src=home.data.thumbnail.url alt=home.data.thumbnail.alt)
+      
+      .home__main__highlight
+        svg.home__main__svg(viewBox="0 0 1920 406" fill="none" xmlns="http://www.w3.org/2000/svg")
+          path(d="M1945 28L-8 90.5399V332.435L1945 378V28Z" fill="#066F14")
+          path(d="M1945 28L-8 90.5399V332.435L1945 378V28Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round")
+            p.home__main__highlight__description(data-animation="description")!=home.data.description1.replace(/\n/g,'<br>')
+      
+      .home__cards
+        h2.home__cards__title LES RÔLES:
+        .home__cards__medias
+          each card in home.data.gallery
+            figure.home__cards__media 
+              img.home__cards__media__image--front(data-src=card.frontcard.url alt=card.frontcard.alt)
+              img.home__cards__media__image--back(data-src=card.backcard.url alt=card.backcard.alt)
+        h3.home__cards__description Tu gagnes avec
+          br
+          span.home__cards__description--team Le Village.
+
+      .home__cards__highlight
+        svg.home__cards__svg(viewBox="0 0 1920 406" fill="none" xmlns="http://www.w3.org/2000/svg")
+          path(d="M-17 28L1936 90.5399V332.435L-17 378V28Z" fill="#066F14")
+          path(d="M-17 28L1936 90.5399V332.435L-17 378V28Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round")
+          p.home__cards__highlight__description(data-animation="description")!=home.data.description2.replace(/\n/g,'<br>')
+
+      footer.home__footer
+        figure.home__footer__icon
+          img.home__footer__icon__image(data-src=home.data.logo.url alt = home.data.logo.alt)
+        .home__footer__description(data-animation="description")!=home.data.price.replace(/\n/g,'<br>')
